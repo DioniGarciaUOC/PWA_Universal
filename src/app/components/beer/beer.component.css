@@ -1,0 +1,28 @@
+a {
+  width: 100px;
+  float: right;
+}
+
+mat-toolbar {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-bottom: 1em;
+
+  font-size: 14px;
+}
+
+mat-expansion-panel {
+  margin-bottom: 1em;
+}
+
+img {
+  margin-bottom: 2em;
+}
+
+.info-box {
+  font-size: 1rem;
+  padding-top: 2em;
+  line-height: 3em;
+}

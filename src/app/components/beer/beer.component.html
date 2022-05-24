@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div
+    *ngIf="beer"
+    class="row animate__animated animate__bounce animate__fadeIn"
+  >
+    <div class="col-md-2">
+      <img
+        width="100"
+        class="rounded"
+        src="{{ beer.image_url }}"
+        alt="Image of virtual beer"
+      />
+    </div>
+    <div class="col-md-9 info-box">
+      <p><strong>Name: </strong>{{ beer.name }}</p>
+      <p><strong>Description: </strong>{{ beer.description }}</p>
+      <p>
+        <strong>Volume: </strong>{{ beer.volume.value }}% over
+        {{ beer.volume.unit }}
+      </p>
+      <p><strong>First Brewed: </strong>{{ beer.first_brewed }}</p>
+
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Marinatings </mat-panel-title>
+          <mat-panel-description>
+            Show {{ !panelOpenState ? "more info" : "less info" }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+          <li *ngFor="let marinate of beer.food_pairing">
+            {{ marinate }}
+          </li>
+        </ul>
+      </mat-expansion-panel>
+
+      <a routerLink="/" class="btn btn-danger">Back</a>
+    </div>
+
+    <div class="col-md-3"></div>
+  </div>
+</div>

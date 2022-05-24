@@ -1,0 +1,48 @@
+.beers-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h2 {
+  margin: 1em;
+}
+
+mat-card {
+  max-width: 250px;
+
+  height: 380px;
+}
+
+img {
+  width: 100px;
+  height: 200px;
+  object-fit: contain;
+  position: relative;
+  left: 6em;
+}
+
+.blinking-red {
+  color: red;
+  animation: blink infinite 1s linear;
+}
+
+a {
+  display: block;
+  margin-bottom: 1em;
+  border: 0;
+  width: fit-content;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
